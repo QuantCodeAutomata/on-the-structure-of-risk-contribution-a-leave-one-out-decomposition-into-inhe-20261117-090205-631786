@@ -1,6 +1,6 @@
 # On the Structure of Risk Contribution: A Leave-One-Out Decomposition into Inherent and Correlation Risk
 
-Replication of selected experiments from:
+Replication of two experiments from:
 
 Nolan Alexander and Frank Fabozzi, "On the Structure of Risk Contribution: A
 Leave-One-Out Decomposition into Inherent and Correlation Risk," arXiv:2604.10375.
