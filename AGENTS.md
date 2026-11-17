@@ -66,11 +66,13 @@ python -m exp.exp_1     # Experiment 1: needs DATALOADER_API_KEY / MASSIVE_API_K
 python -m exp.exp_2      # Experiment 2: synthetic data only
 ```
 
-`python -m exp.exp_1 --full` runs the paper's full 1990-2025 window and
-twelve-instrument universe (see "Deviations from the paper" in
-`results/RESULTS.md` for why the default run uses a reduced universe and
-window). `reproduce.sh` runs the test suite and both experiments with these
-same commands and overwrites every file in `results/`.
+Experiment 1 always runs on the nine-instrument proxy universe over its full
+realized window (2007-04-19 to 2025-08-01): three of the paper's twelve
+instruments have no continuous-futures series or liquid, long-history ETF
+proxy available through the data sources used here, so there is no narrower
+default to widen with a flag (see "Deviations from the paper" in
+`results/RESULTS.md`). `reproduce.sh` runs the test suite and both
+experiments with the commands above and overwrites every file in `results/`.
 
 ## Conventions
 
