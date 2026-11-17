@@ -1,0 +1,19 @@
+{
+  "population_targets":{
+    "total_rc":3.8729833462,
+    "total_inh":1.2909944487,
+    "total_corr":2.5819888975
+  },
+  "n_bootstrap":100,
+  "max_sample_size":450,
+  "band_width_at_T5":{
+    "total_rc":4.2732485216,
+    "total_inh":0.8877796766,
+    "total_corr":4.2290799251
+  },
+  "band_width_at_T125":{
+    "total_rc":0.6948157072,
+    "total_inh":0.1022468432,
+    "total_corr":0.6947407808
+  }
+}
