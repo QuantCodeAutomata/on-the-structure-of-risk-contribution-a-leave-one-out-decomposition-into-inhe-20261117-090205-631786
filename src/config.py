@@ -116,10 +116,13 @@ COV_OFFDIAG = 0.5  # off-diagonal (covariance) of Sigma (App. B)
 PORTFOLIO_WEIGHT = 1.0  # gross weight per asset ("equal-weighted portfolio", Appendix B).
 # The paper reports population targets Total RC = 4.3, Inh = 1.1, Corr = 3.3 for
 # Sigma with unit diagonal and 0.5 off-diagonal. Weights normalized to sum to one
-# (w_i = 1/5) give sigma_p = 0.774, far from 4.3; w_i = 1 reproduces sigma_p = 3.87,
-# RC_inh = 1.0, RC_corr = 2.87, the closest integer gross weight to the reported
-# figure, so it is used here (assumed; the paper calls this the "equal-weighted
-# portfolio" without stating the normalization).
+# (w_i = 1/5) give sigma_p = 0.774, far from 4.3; w_i = 1 gives sigma_p = 3.87,
+# RC_inh = 1.29, RC_corr = 2.58 (eq. 10), the closest integer gross weight to the
+# reported figure, so it is used here (assumed; the paper calls this the
+# "equal-weighted portfolio" without stating the normalization). The Inh/Total
+# ratio is invariant to the common scale factor for this symmetric Sigma, so no
+# integer or fractional uniform weight reproduces the paper's exact Inh/Total
+# ratio (1.1/4.3 = 0.256 versus 1.29/3.87 = 0.333); see results/RESULTS.md.
 MAX_SAMPLE_SIZE = 450  # maximum simulated sample size T (Appendix B)
 MIN_WINDOW_SIZE = 5  # expanding window starts at 5 days (Appendix B)
 N_BOOTSTRAP_PAPER = 100  # paper's bootstrap replication count (Appendix B)

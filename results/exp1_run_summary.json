@@ -1,0 +1,22 @@
+{
+  "n_obs":4602,
+  "n_tickers":9,
+  "sample_start":"2007-04-19",
+  "sample_end":"2025-08-01",
+  "single_day_date":"2025-08-01",
+  "excluded_tickers":[
+    "XU1 Index",
+    "RX1 Comdty",
+    "JB1 Comdty"
+  ],
+  "non_massive_source":{
+    "UNG":"yahoo",
+    "DBA":"yahoo",
+    "SPY":"yahoo",
+    "EWQ":"yahoo",
+    "IEF":"yahoo",
+    "FXC":"yahoo",
+    "FXE":"yahoo",
+    "FXY":"yahoo"
+  }
+}
