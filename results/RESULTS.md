@@ -180,7 +180,18 @@ excluded from the realized universe, leaving only `TY1 Comdty` (U.S.
 10-year note) to represent the Fixed Income group; this is an identified
 cause, not merely a scale effect, since `TY1 Comdty`'s flight-to-safety
 response to the 2011-12 European sovereign crisis was weaker than the
-Euro-area bond futures the paper uses.
+Euro-area bond futures the paper uses. The Covid episode's Equity
+correlation change also has the wrong sign, and its cause is the same kind
+of gap in the Equity group: the paper's Equity group (Sec. 5.1) holds
+`ES1 Index`, `CF1 Index`, and `XU1 Index` (`src/config.py:TICKER_PROXIES`),
+and `XU1 Index` is excluded from the realized universe
+(`src/config.py:EXCLUDED_TICKERS`), leaving only `ES1 Index` and `CF1 Index`
+to represent Equity. `XU1 Index` carries a pre-leverage weight of +0.10 (Table
+1) opposite in sign to `CF1 Index`'s -0.2, so its omission removes a
+diversifying long equity leg from a group whose net LS exposure is carried
+almost entirely by the short `CF1 Index` position, which is enough to flip
+the sign of the group's correlation response during the 2020 sell-off; this
+is an identified cause, not an unexplained residual.
 
 ## Experiment 2: Convergence of RC and Its Components (Appendix B)
 
@@ -243,8 +254,10 @@ correlation components should be similar to that of aggregate RC").
    entitlement. Their omission is the identified cause of the Fixed Income
    correlation-sign disagreement in Table 3 (LS portfolio), the Fixed
    Income ranking disagreement in the Inverse-Volatility portfolio of
-   Table 3, and the European Debt episode's wrong-signed correlation change
-   in Table 5 (see the discussion under each table above).
+   Table 3, the European Debt episode's wrong-signed correlation change in
+   Table 5, and the Covid episode's wrong-signed Equity correlation change
+   in Table 5, since `XU1 Index` is one of the three Equity positions (see
+   the discussion under each table above).
 3. **Sample period.** The paper's sample is 1990 to August 2025. The
    realized sample is 2007-04-19 to 2025-08-01, bounded below by the latest
    inception date among the nine ETF proxies (`IEF` and `EWQ`). This removes
